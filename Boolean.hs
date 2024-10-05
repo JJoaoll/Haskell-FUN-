@@ -1,4 +1,10 @@
-data Boolean = T | F deriving(Show, Eq) 
+data Boolean = T | F deriving(Show) 
+
+instance (Eq Boolean) where 
+  T == T = True 
+  F == F = True 
+  _ == _ = False
+
 lnot :: Boolean -> Boolean 
 lnot T = F
 lnot _ = T 
