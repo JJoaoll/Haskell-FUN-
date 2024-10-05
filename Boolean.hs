@@ -1,4 +1,3 @@
-import Data.Bits (Bits(xor))
 data Boolean = T | F deriving(Show, Eq) 
 lnot :: Boolean -> Boolean 
 lnot T = F
