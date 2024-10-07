@@ -1,4 +1,8 @@
-data Boolean = T | F deriving(Show) 
+data Boolean = T | F 
+
+instance (Show Boolean) where 
+  show T = "T"
+  show F = "F"
 
 instance (Eq Boolean) where 
   T == T = True 
