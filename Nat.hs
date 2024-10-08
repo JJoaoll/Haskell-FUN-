@@ -3,15 +3,16 @@ module Nat where
 data Nat = O | S Nat deriving(Eq)
 
 plus :: Nat -> Nat -> Nat 
-plus n O = n 
+plus n O     = n 
 plus n (S m) = S (plus n m)
 
 --(+) :: Nat -> Nat -> Nat 
 --(+) = plus
 
 instance (Show Nat) where
-  show O   = "O"
-  show (S n) = "S" ++ show n 
+  show O     = "O"
+  show (S n) = 'S' : show n
+ -- show (S n) = "S" ++ show n 
  
   -------------gambiarras:--------------
 {-instance (Show Nat) where

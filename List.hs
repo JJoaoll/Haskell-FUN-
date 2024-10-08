@@ -18,3 +18,7 @@ cat (Cons x xs) ys = Cons x (cat xs ys)
 filterr :: (a -> Bool) -> List a -> List a
 filterr _ Empty           = Empty 
 filterr judge (Cons x xs) = if judge x then Cons x (filterr judge xs) else filterr judge xs
+
+len :: [a] -> Int
+len [] = 0
+len (x : xs) = 1 + len xs 
